@@ -9,6 +9,9 @@ a {
   width: 100%;
   text-align: center;
 }
+.warning {
+  color: red;
+}
 .navigation-conatiner {
   display: flex;
   /* height: 100%; */

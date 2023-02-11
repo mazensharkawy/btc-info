@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavigationButton from "./components/NavigationButton";
+import Transactions from "./components/Transactions";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
               </div>
             }
           ></Route>
-          <Route path="/transaction" element={<div />}></Route>
+          <Route path="/transaction" element={<Transactions />}></Route>
           <Route path="/address" element={<div />}></Route>
         </Routes>
       </div>
