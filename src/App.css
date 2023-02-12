@@ -55,7 +55,7 @@ a {
 @media (min-width: 768px) {
   .navigation-conatiner {
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     padding: 1rem;
   }
