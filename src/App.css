@@ -2,12 +2,13 @@ a {
   color: black;
   text-decoration: none;
 }
-.App {
-  height: 100vh;
-}
 .title {
   width: 100%;
   text-align: center;
+  cursor: pointer;
+}
+.title:hover{
+  color: grey;
 }
 .warning {
   color: red;
@@ -30,6 +31,24 @@ a {
   display: flex;
   cursor: pointer;
 }
+.result-card {
+  border: lightgrey solid 1px;
+  border-radius: 10px;
+  width: 80vw;
+  margin: 1vw auto;
+  padding: 2vw 5vw;
+}
+.result-card p{
+  word-wrap: break-word;
+}
+.search-bar {
+  margin: 2vw auto;
+  width: 60vw;
+  display: block;
+  border: 1px solid black;
+  padding: 1vw 2vw;
+  border-radius: 10px;
+}
 .navigation-button:hover {
   background-color: lightgrey;
 }
@@ -45,5 +64,11 @@ a {
     padding: 2rem;
     width: 20vw;
     height: 15vw;
+  }
+  .result-card {
+    width: 50vw;
+  }
+  .search-bar {
+    width: 40vw;
   }
 }

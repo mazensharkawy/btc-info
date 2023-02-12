@@ -1,11 +1,11 @@
 import React, { useState, SetStateAction, useEffect } from "react";
 import { Dispatch } from "react";
-import TransactionDetails from "./TransactionDetails";
+import AddressDetails from "./AddressDetails";
 import useFetch from "../hooks/useFetch";
 
-const TRANSACTION_URL = "rawtx/";
+const ADDRESS_URL = "rawaddr/";
 
-function Transactions() {
+function Address() {
   const [input, setInput]: [
     string,
     Dispatch<SetStateAction<string>>
@@ -13,13 +13,13 @@ function Transactions() {
 
   const [invalidInput, setInvalidInput] = useState<boolean>(true);
 
-  const [transaction, loading, error] = useFetch(
-    TRANSACTION_URL + input + "/",
+  const [address, loading, error] = useFetch(
+    ADDRESS_URL + input + "/",
     invalidInput
   );
 
   useEffect(() => {
-    if (input.length === 64) {
+    if (input.length === 34) {
       setInvalidInput(false);
     } else setInvalidInput(true);
   }, [input]);
@@ -31,13 +31,13 @@ function Transactions() {
         onChange={({ target: { value } }) => setInput(value)}
       />
       {invalidInput && input.length ? (
-        <p className="warning">Transaction hash must be 64 char long</p>
+        <p className="warning">Address hash must be 34 char long</p>
       ) : (
         ""
       )}
       {loading ? <p>Loading Transaction</p> : ""}
-      {transaction && !loading ? (
-        <TransactionDetails transaction={transaction} />
+      {address && !loading ? (
+        <AddressDetails address={address} />
       ) : (
         ""
       )}
@@ -46,4 +46,4 @@ function Transactions() {
   );
 }
 
-export default Transactions;
+export default Address;

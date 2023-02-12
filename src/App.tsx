@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Address from "./components/Address";
 import NavigationButton from "./components/NavigationButton";
 import Transactions from "./components/Transactions";
 
@@ -8,7 +9,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1 className="title"> BTC Info</h1>
+        <Link to="/">
+          <h1 className="title"> BTC Info</h1>
+        </Link>
         <Routes>
           <Route
             path="/"
@@ -16,17 +19,17 @@ function App() {
               <div className="navigation-conatiner ">
                 <NavigationButton
                   buttonText="Transaction Search"
-                  link="/link"
+                  link="/transaction"
                 />
                 <NavigationButton
                   buttonText="Address Search"
-                  link="/transaction"
+                  link="/address"
                 />
               </div>
             }
           ></Route>
           <Route path="/transaction" element={<Transactions />}></Route>
-          <Route path="/address" element={<div />}></Route>
+          <Route path="/address" element={<Address />}></Route>
         </Routes>
       </div>
     </Router>
