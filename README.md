@@ -1,9 +1,9 @@
 
 A simple Mobile-friendly UI to search BTC transactions and Addresses.
 
-#Screenshots
-![Alt Text](https://github.com/mazensharkawy/btc-info/blob/master/public/sc1.png)
-![Alt Text](https://github.com/mazensharkawy/btc-info/blob/master/public/sc2.png)
+# Screenshots
+![Screenshot](https://github.com/mazensharkawy/btc-info/blob/master/public/sc1.png?raw=true)
+![Screenshot](https://github.com/mazensharkawy/btc-info/blob/master/public/sc2.png?raw=true)
 
 
 ## Available Scripts
