@@ -1,6 +1,10 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Mobile-friendly UI to search BTC transactions and Addresses.
+
+#Screenshots
+![Alt Text](https://github.com/mazensharkawy/btc-info/blob/master/public/sc1.png)
+![Alt Text](https://github.com/mazensharkawy/btc-info/blob/master/public/sc2.png)
+
 
 ## Available Scripts
 
